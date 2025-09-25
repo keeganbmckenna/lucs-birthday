@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Happy 27th Birthday! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Playfair Display', 'Comfortaa', 'Bradley Hand', serif, cursive;
+            background: linear-gradient(135deg, #87CEEB 0%, #E0F6FF 50%, #B0E0E6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+        
+        .presentation {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slide {
+            display: none;
+            padding: 60px 40px;
+            text-align: center;
+            min-height: 600px;
+            position: relative;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide1 {
+            background: linear-gradient(45deg, #FFE5B4, #FFCCCB, #E6E6FA);
+        }
+        
+        .slide2 {
+            background: linear-gradient(45deg, #B0E0E6, #E0F6FF, #F0FFFF);
+        }
+        
+        .slide3 {
+            background: linear-gradient(45deg, #98FB98, #F0FFF0, #E0FFE0);
+        }
+        
+        .slide4 {
+            background: linear-gradient(45deg, #E6E6FA, #F0F8FF, #FFF0F5);
+        }
+        
+        .slide5 {
+            background: linear-gradient(45deg, #FFE5E5, #FFF0F0, #F0F8FF);
+        }
+        
+        h1 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Playfair Display', 'Bradley Hand', serif, cursive;
+            font-weight: 700;
+            font-size: 3.5em;
+            color: #FF6B6B;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: bounceIn 1.5s ease-out, rainbowText 3s ease-in-out infinite 2s, glow 2s ease-in-out infinite 3s;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            color: #4ECDC4;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            font-size: 2em;
+            color: #45B7D1;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.3em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .big-emoji {
+            font-size: 4em;
+            margin: 20px 0;
+            animation: bounce 2s infinite, pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .gift-box {
+            background: #FFE5B4;
+            border: 3px dashed #FF6B6B;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .gift-box::before {
+            content: '🎁';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            background: transparent;
+            padding: 0 15px;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #45B7D1;
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: pulse 0.6s ease-in-out;
+        }
+        
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .wave-decoration {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 110%;
+            height: 100px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C300,10 600,90 900,20 C1050,5 1150,80 1200,30 L1200,100 L0,100 Z' fill='%234ECDC4' opacity='0.3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            animation: wave 3s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-25px); }
+        }
+        
+        /* ========== SPECTACULAR ANIMATIONS ========== */
+        
+        @keyframes bounceIn {
+            0% { 
+                transform: scale(0.3) translateY(-100px);
+                opacity: 0;
+            }
+            50% { 
+                transform: scale(1.1) translateY(10px);
+                opacity: 1;
+            }
+            70% { 
+                transform: scale(0.9) translateY(-5px);
+            }
+            100% { 
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes rainbowText {
+            0% { color: #FF6B6B; }
+            16% { color: #FF8E53; }
+            32% { color: #FF6B9D; }
+            48% { color: #C44569; }
+            64% { color: #F8B500; }
+            80% { color: #4ECDC4; }
+            100% { color: #FF6B6B; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+            }
+            50% { 
+                transform: scale(1.2);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% { 
+                transform: translateY(-10px) rotate(2deg);
+            }
+            50% { 
+                transform: translateY(-5px) rotate(-1deg);
+            }
+            75% { 
+                transform: translateY(-15px) rotate(1deg);
+            }
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
+        }
+        
+        @keyframes confettiFall {
+            0% { 
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes glow {
+            0%, 100% { 
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            }
+            50% { 
+                text-shadow: 0 0 20px #4ECDC4, 0 0 30px #4ECDC4, 0 0 40px #4ECDC4;
+            }
+        }
+        
+        .balloon {
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .balloon1 { top: 20px; left: 10%; animation: float 4s ease-in-out infinite; animation-delay: 0s; }
+        .balloon2 { top: 50px; right: 15%; animation: float 3.5s ease-in-out infinite; animation-delay: 1s; }
+        .balloon3 { top: 30px; left: 80%; animation: float 4.5s ease-in-out infinite; animation-delay: 2s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .highlight {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            margin: 10px 5px;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: #333;
+            font-weight: bold;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .creative-option {
+            background: rgba(255,255,255,0.8);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: left;
+            border-left: 5px solid #4ECDC4;
+        }
+        
+        .creative-option h4 {
+            color: #FF6B6B;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        .creative-option a {
+            color: #45B7D1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .creative-option a:hover {
+            text-decoration: underline;
+        }
+        
+        .creative-option p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                align-items: flex-start;
+            }
+            
+            .presentation {
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+                min-height: 100vh;
+            }
+            
+            .slide {
+                padding: 20px 15px 80px 15px;
+                min-height: 100vh;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            
+            .slide.active {
+                display: flex;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            
+            h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            
+            h3 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+            
+            p {
+                font-size: 1.1em;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+            
+            .big-emoji {
+                font-size: 3em;
+                margin: 15px 0;
+            }
+            
+            .gift-box {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .gift-box::before {
+                font-size: 1.5em;
+                top: -15px;
+                padding: 0 10px;
+            }
+            
+            .creative-option {
+                padding: 15px;
+                margin: 10px 0;
+            }
+            
+            .creative-option h4 {
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+            
+            .creative-option p {
+                font-size: 1em;
+                margin: 5px 0;
+            }
+            
+            .navigation {
+                position: fixed;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                gap: 8px;
+                z-index: 100;
+            }
+            
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 0.9em;
+                border-radius: 12px;
+                min-width: 80px;
+                white-space: nowrap;
+            }
+            
+            .slide-counter {
+                top: 15px;
+                right: 15px;
+                padding: 4px 12px;
+                font-size: 0.9em;
+            }
+            
+            .balloon {
+                display: none;
+            }
+            
+            .wave-decoration {
+                height: 60px;
+            }
+            
+            .slide-photo {
+                max-width: 120px;
+                max-height: 120px;
+            }
+            
+            .birthday-photo {
+                width: calc((100vw - 60px) / 2);
+                height: calc((100vw - 60px) / 2);
+                max-width: 160px;
+                max-height: 160px;
+                min-width: 100px;
+                min-height: 100px;
+                object-fit: cover;
+            }
+            
+            .gift-photo {
+                max-width: 100px;
+                max-height: 100px;
+                margin: 8px;
+            }
+            
+            .creative-photo {
+                max-width: 100px;
+                max-height: 100px;
+            }
+            
+            .final-photo {
+                max-width: 110px;
+                max-height: 110px;
+                margin: 8px;
+            }
+            
+        }
+        
+        /* ========== CELEBRATION EFFECTS ========== */
+        
+        .confetti {
+            position: fixed;
+            top: -10px;
+            z-index: 1;
+            width: 10px;
+            height: 10px;
+            background: #FFD700;
+            animation: confettiFall 3s linear infinite;
+        }
+        
+        .confetti:nth-child(1) { left: 10%; background: #FF6B6B; animation-delay: 0s; }
+        .confetti:nth-child(2) { left: 20%; background: #4ECDC4; animation-delay: 0.5s; }
+        .confetti:nth-child(3) { left: 30%; background: #45B7D1; animation-delay: 1s; }
+        .confetti:nth-child(4) { left: 40%; background: #96CEB4; animation-delay: 1.5s; }
+        .confetti:nth-child(5) { left: 50%; background: #FFEAA7; animation-delay: 0.3s; }
+        .confetti:nth-child(6) { left: 60%; background: #DDA0DD; animation-delay: 0.8s; }
+        .confetti:nth-child(7) { left: 70%; background: #98D8C8; animation-delay: 1.3s; }
+        .confetti:nth-child(8) { left: 80%; background: #F7DC6F; animation-delay: 0.2s; }
+        .confetti:nth-child(9) { left: 90%; background: #BB8FCE; animation-delay: 1.8s; }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        .sparkle1 { top: 15%; left: 20%; animation-delay: 0s; }
+        .sparkle2 { top: 25%; right: 25%; animation-delay: 0.7s; }
+        .sparkle3 { top: 35%; left: 75%; animation-delay: 1.4s; }
+        .sparkle4 { top: 45%; left: 15%; animation-delay: 0.3s; }
+        .sparkle5 { top: 55%; right: 20%; animation-delay: 1.1s; }
+        
+        /* ========== PHOTO STYLES ========== */
+        
+        .slide-photo {
+            max-width: 200px;
+            max-height: 200px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 3px solid #fff;
+            object-fit: cover;
+            animation: fadeInGently 1.5s ease-out;
+        }
+        
+        .birthday-photo {
+            max-width: 250px;
+            max-height: 250px;
+            border-radius: 15px;
+            margin: 10px;
+            animation: fadeInGently 2s ease-out, gentleFloat 4s ease-in-out infinite 2s;
+        }
+        
+        .gift-photo {
+            max-width: 80vw;
+            max-height: 300px;
+            border-radius: 15px;
+            margin: 15px;
+            animation: bounceIn 1.5s ease-out 1.5s both;
+        }
+        
+        .creative-photo {
+            max-width: 80vw;
+            max-height: 300px;
+            border-radius: 15px;
+            margin: 15px;
+            border: 2px solid #4ECDC4;
+        }
+        
+        .final-photo {
+            max-width: 80vw;
+            max-height: 300px;
+            border-radius: 15px;
+            margin: 15px;
+            animation: fadeInGently 1.8s ease-out;
+        }
+        
+        @keyframes fadeInGently {
+            0% { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes gentleFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-8px);
+            }
+        }
+        
+        .photo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin: 20px 0; */
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+            justify-items: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .photo-grid {
+                max-width: calc(100vw - 40px);
+                gap: 8px;
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .photo-grid {
+                max-width: calc(100vw - 30px);
+                gap: 5px;
+                margin: 15px auto;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Birthday Greeting -->
+        <div class="slide slide1 active">
+            <div class="slide-counter">1/5</div>
+            <div class="balloon balloon1">🎈</div>
+            <div class="balloon balloon2">🎈</div>
+            <div class="balloon balloon3">🎈</div>
+            
+            <!-- Confetti Effects -->
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            
+            <!-- Sparkle Effects -->
+            <div class="sparkle sparkle1"></div>
+            <div class="sparkle sparkle2"></div>
+            <div class="sparkle sparkle3"></div>
+            <div class="sparkle sparkle4"></div>
+            <div class="sparkle sparkle5"></div>
+            
+            <h1>Happy Birthday Luc!</h1>
+            <div class="photo-grid">
+                <img src="images/luc_1.jpg" alt="Luc" class="slide-photo birthday-photo">
+                <img src="images/luc_2.jpg" alt="Luc" class="slide-photo birthday-photo">
+                <img src="images/luc_3.jpg" alt="Luc" class="slide-photo birthday-photo">
+                <img src="images/luc_4.jpg" alt="Luc" class="slide-photo birthday-photo">
+            </div>
+            <div class="big-emoji">🎈 🎂 🎉</div>
+            <h2>What an amazing day!</h2>
+            <p>Time to celebrate this amazing milestone with something extra special...</p>
+            <div class="wave-decoration"></div>
+        </div>
+        
+        <!-- Slide 2: Gift Reveal -->
+        <div class="slide slide2">
+            <div class="slide-counter">2/5</div>
+            
+            <!-- Creative themed sparkles -->
+            <div class="sparkle sparkle1" style="background: #4ECDC4;"></div>
+            <div class="sparkle sparkle3" style="background: #87CEEB;"></div>
+            <div class="sparkle sparkle5" style="background: #45B7D1;"></div>
+            
+            <h2 style="animation: bounceIn 1s ease-out 0.5s both;">🎁 Birthday Gift! 🎁</h2>
+            <div class="gift-box" style="animation: bounceIn 1.2s ease-out 1s both;">
+                <h3>6 Months of Adobe Creative Cloud!</h3>
+                    <div class="photo-container">
+                        <img src="images/gift_1.jpg" alt="Adobe Creative Cloud" class="slide-photo gift-photo">
+                    </div>
+                <div class="big-emoji">🎨 🖥️ ✨</div>
+                <p>Get ready for some <span class="highlight">creative magic</span>!</p>
+                <p>Adobe Creative Cloud gives you access to:</p>
+                <p>🎨 Professional design tools<br>
+                📷 Advanced photo editing<br>
+                🎥 Video creation & editing<br>
+                ✨ Unlimited creative possibilities</br>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Creative Suite Apps -->
+        <div class="slide slide4">
+            <div class="slide-counter">3/5</div>
+            <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); white-space: nowrap;">🎨&nbsp;Creative&nbsp;Suite&nbsp;Apps&nbsp;🖥️</h2>
+            <div class="photo-container">
+                <img src="images/gift_2.jpg" alt="Creative Tools" class="slide-photo creative-photo">
+            </div>
+            <p style="text-align: center; margin-bottom: 30px;">Explore all the amazing apps included in your subscription!</p>
+            
+            <div class="creative-option">
+                <h4>🎨 Photoshop & Lightroom</h4>
+                <p>Professional photo editing and image manipulation</p>
+            </div>
+
+            <div class="creative-option">
+                <h4>🎥 Premiere Pro & After Effects</h4>
+                <p>Video editing and motion graphics for stunning content</p>
+            </div>
+
+            <div class="creative-option">
+                <h4>🎭 Illustrator & InDesign</h4>
+                <p>Vector graphics and professional layout design</p>
+            </div>
+
+            <div class="creative-option">
+                <h4>🎵 Audition & Media Encoder</h4>
+                <p>Audio editing and media optimization tools</p>
+            </div>
+
+            <div class="creative-option">
+                <h4>✨ Plus 15+ More Apps</h4>
+                <p>Dimension, XD, Animate, Dreamweaver, and many more!</p>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Next Steps -->
+        <div class="slide slide3">
+            <div class="slide-counter">4/5</div>
+            <h2>Ready to Unleash Your Creativity? 🎨</h2>
+            <div class="photo-container">
+                <img src="images/gift_3.jpg" alt="Design" class="slide-photo final-photo">
+            </div>
+            <div class="big-emoji">🎨 ✨ 🚀</div>
+            <p>This gift includes 6 full months of Adobe Creative Cloud access!</p>
+            <div class="gift-box">
+                <p><strong>What's Next:</strong></p>
+                <p>📧 We'll send two separate 3 month codes<br>
+                ⬇️ Download your favorite Adobe apps<br>
+                🎨 Start creating amazing content<br>
+                📸 Share your creative journey with us!</p>
+            </div>
+            <h3>Wishing you endless creative inspiration and amazing projects ahead! ✨</h3>
+        </div>
+        
+        <!-- Slide 5: Love Message -->
+        <div class="slide slide5">
+            <div class="slide-counter">5/5</div>
+            
+            <!-- Heart sparkles -->
+            <div class="sparkle sparkle1" style="background: #FF6B6B;"></div>
+            <div class="sparkle sparkle2" style="background: #FF6B6B;"></div>
+            <div class="sparkle sparkle3" style="background: #FF6B6B;"></div>
+            <div class="sparkle sparkle4" style="background: #FF6B6B;"></div>
+            <div class="sparkle sparkle5" style="background: #FF6B6B;"></div>
+            
+            <div class="big-emoji">❤️ 🎂 🎈 ❤️</div>
+            <h1 style="animation: bounceIn 1.5s ease-out, glow 2s ease-in-out infinite 2s;">From</h1>
+            <h2 style="animation: bounceIn 1.8s ease-out 0.5s both;">Shiv, Bergen, Reid, and Keegan</h2>
+            <div class="big-emoji">❤️ 🎁 🎉 ❤️</div>
+        </div>
+        
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn" onclick="goPrev()">← Prev</button>
+            <button class="nav-btn" id="nextBtn" onclick="goNext()">Next →</button>
+        </div>
+    </div>
+    
+    <script>
+        // Simple, mobile-friendly navigation
+        var currentSlide = 0;
+        var totalSlides = 5; // We know we have 5 slides
+        
+        function showSlide(n) {
+            // Hide all slides
+            var slides = document.getElementsByClassName('slide');
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            
+            // Show current slide
+            currentSlide = Math.max(0, Math.min(n, totalSlides - 1));
+            if (slides[currentSlide]) {
+                slides[currentSlide].classList.add('active');
+                // Force animation restart by temporarily removing and re-adding the slide class
+                var slideClass = slides[currentSlide].className;
+                slides[currentSlide].className = 'slide';
+                slides[currentSlide].offsetHeight; // Trigger reflow
+                slides[currentSlide].className = slideClass;
+            }
+            
+            // Update buttons
+            var prevBtn = document.getElementById('prevBtn');
+            var nextBtn = document.getElementById('nextBtn');
+            
+            if (prevBtn) {
+                prevBtn.disabled = (currentSlide === 0);
+                prevBtn.style.opacity = (currentSlide === 0) ? '0.5' : '1';
+            }
+            if (nextBtn) {
+                nextBtn.disabled = (currentSlide === totalSlides - 1);
+                nextBtn.style.opacity = (currentSlide === totalSlides - 1) ? '0.5' : '1';
+            }
+        }
+        
+        function goNext() {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+        
+        function goPrev() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Initialize when page loads
+        setTimeout(function() {
+            showSlide(0);
+        }, 100);
+        
+        // Touch support disabled - only buttons can change slides
+    </script>
+</body>
+</html>
